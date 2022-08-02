@@ -1,0 +1,91 @@
+What are Regular Expressions?
+Regular Expressions, often shortened as regex, are nothing but character 
+sequences that provide search patterns in the text. They are used for 
+various string-based operations like searching, finding & replacing, 
+validating input, etc. 
+
+Regex finds its use in various search engines, text editors like MS 
+Word, and even in text processing utilities such as AWK or sed. Most 
+general-purpose programming languages like C, C++, Python, JS, Java, 
+etc. support regex.
+
+POSIX Regular Expressions:
+One of the standards of POSIX defines two methods for using regular 
+expressions. “grep” and “egrep” is used to implement regular 
+expressions on POSIX systems.
+
+In POSIX Basic Regex syntax, most chars are treated as literals, i.e. 
+they match only themselves (e.g. j will match with “j“). However, there 
+are some exceptions, which are called Metacharacters.
+
+Metacharacters	Descriptions
+.	To match any character once. The dot character matches a literal dot, 
+    within POSIX bracket expressions. For example, a.c matches “abc”, etc., 
+    but [a.c] matches only “a”, “.”, or “c”.
+
+–	Used to define a range. For Example, [a-d] will match for chars a to d, 
+    both inclusive.
+
+[ ]	To match anything inside the square brackets. For e.g. [ab] will match 
+    a or b.
+
+^	The ^ (caret) within the square brackets negates the expressions. For 
+    example, [^a] will match anything except a.
+
+$ 	The dollar symbol matches the ending position of the string if it is 
+    the last character of the regular expression.
+
+*	To match the preceding character 0 or more times. For example, a*d 
+    will match and, annnd, aaaaad, etc.
+
+{n}	To match the preceding chars n times. Example, [0-9]{3} will match 
+    123, 234, 345, etc.
+
+{n,m}	To match preceding char at least n times and not more than m times. 
+        Example, [0-9]{3,5} will match 123, 3456, 45668, etc.
+
+
+Some examples:
+1. To match any three-letter string ending with at. For example, cat, hat, etc.
+                            .at
+
+2. To match all strings ending in at except bat.
+                            [^b]at
+
+
+3. To match hat and cat, but only at the beginning of the string or line.
+                                ^[hc]at
+
+4. To match uppercase letters.
+                [:upper:] (similar to [A-Z])
+
+
+5. To match lowercase letters.
+            [:lower:] (similar to [a-z])
+
+
+6. To match whitespace characters.
+
+[ \t\n\r\f\v]
+
+Regular Expression Quick Guide
+
+^        Matches the beginning of a line
+$        Matches the end of the line
+.        Matches any character
+\s       Matches whitespace
+\S       Matches any non-whitespace character
+*        Repeats a character zero or more times
+*?       Repeats a character zero or more times 
+         (non-greedy)
++        Repeats a character one or more times
++?       Repeats a character one or more times 
+         (non-greedy)
+[aeiou]  Matches a single character in the listed set
+[^XYZ]   Matches a single character not in the listed set
+[a-z0-9] The set of characters can include a range
+(        Indicates where string extraction is to start
+)        Indicates where string extraction is to end
+
+for more examples visit 
+https://www.postgresql.org/docs/11/functions-matching.html#functions-posix-regexp

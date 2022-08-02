@@ -1,0 +1,36 @@
+-- this text file looks at the history of POSIX
+
+This week lecture covered regular expressions.
+We focused on general regular expressions and POSIX.
+POSIX is the regular expression for postgres
+
+POSIX stands for Portable Operating System Interface. It defines a 
+set of standard operating system interfaces based on the UNIX OS. 
+These standards are specified by the IEEE (Institute of Electrical
+and Electronics Engineers) society which the compatibility between 
+different operating systems. POSIX systems are theorized in such a 
+way that data or code can be transferred seamlessly between any 
+two systems that are POSIX compliant.
+
+POSIX standards define application programming interfaces (API) at 
+both the system and user levels and command-line shells and utility 
+interfaces for software compatibility and/or portability with various 
+distributions of the Unix Operating System and other operating systems 
+as well. The IEEE also owns the trademark of POSIX. Developers are 
+encouraged to use POSIX as it saves time for developers all around 
+the world along with providing easier means for portability.
+
+History of POSIX:
+Earlier, computer programmers had to write different programs from ground
+zero for every single computer model. This was time-consuming and in most
+cases very difficult as each computer model was somehow different than 
+the other and special care had to be taken to write a program keeping 
+their hardware in mind. After AT&T Bell Labs launched the Unix OS, nothing
+was the same anymore. Unix quickly became popular and various different 
+distributions like BSD, Xenix, etc. came into the picture. The introduction 
+of newer operating systems like Unix would make it even more difficult for 
+developers to maintain their software among so many devices and now operating 
+systems too. This prompted the establishment of some standards that later came 
+to be known as POSIX. They were first released under the name IEEE Standard 
+1003.1-1988 in the year 1988. The main aim was to establish some sort of pre-defined 
+rules for future systems to maintain portability regardless of their hardware or manufacturers.
